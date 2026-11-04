@@ -13,12 +13,12 @@ def train_tokenizer(corpus, vocab_size, min_frequency, pretokenizer=Metaspace(),
     min_frequency: we only merge token pairs that are frequent enough
     pretokenizer: a simple tokenizer that we use before BPE tokenization
 
-        You probably don't need to change the pretokenizer, unless you are working with
-        languages that really don't use any form of blank space
+        You probably don't need to change the pretokenizer, unless you are
+        working with languages that really don't use any form of blank space
         (then you could, for example, pretokenize at character level)
     """
     # Create an empty BPE tokenizer
-    tokenizer = Tokenizer(BPE(unk_token=unk_token)) #unk_token used for characters that cannot be encoded
+    tokenizer = Tokenizer(BPE(unk_token=unk_token)) # unk_token used for characters that cannot be encoded
 
     # First split the corpus into words
     tokenizer.pre_tokenizer = pretokenizer
