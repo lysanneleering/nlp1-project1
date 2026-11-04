@@ -1,3 +1,8 @@
+"""
+Self-written code that finds dataset split sizes, training class counts,
+and sample texts with their labels.
+"""
+
 from collections import Counter
 from datasets import load_dataset
 
